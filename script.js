@@ -211,7 +211,7 @@ function updateButtonStates(cartItems, compareItems) {
         });
 
         button.classList.toggle("active", itemFound);
-        button.textContent = itemFound ? "Added To Compare" : "Compare";
+        button.textContent = itemFound ? "Remove From Compare" : "Compare";
     });
 }
 
