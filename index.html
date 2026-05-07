@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Meta setup for proper rendering and responsiveness -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page Title -->
+    <title>Ishapore Firearms | Licensed Guns</title>
+
+    <!-- External CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&amp;family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/d/dd/RFI_company_logo.jpg" type="image/png"> 
+</head>
+
+
+<body>
+    <!---------- HEADER SECTION ---------->
+    <header>
+
+        <!-- Navigation Bar -->
+        <div class="navbar">
+            <a class="logo" href="index.html">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/dd/RFI_company_logo.jpg">
+                <span class="logo-copy">
+                    <strong>Ishapore Arsenal</strong>
+                    <small>Refined Civilian Catalogue</small>
+                </span>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav>
+                <a href="#pistols">Pistols</a>
+                <a href="#rifles">Rifles</a>
+                <a href="#shotguns">Shotguns</a>
+                <a href="#armour">Armour</a>
+                <a href="#ammo">Ammo</a>
+                <a href="about_us.html">About</a>
+            </nav>
+            <div class="cart-shell">
+                <button class="cart-icon" id="cartToggle" type="button" aria-expanded="false" aria-controls="cartDropdown" aria-label="Open cart">
+                    🛒
+                    <span class="cart-count">0</span>
+                </button>
+                <div class="cart-dropdown" id="cartDropdown">
+                    <div class="cart-dropdown-head">
+                        <div>
+                            <p class="strip-label">Marketplace Cart</p>
+                            <h2>Your Cart</h2>
+                        </div>
+                        <button class="utility-clear" id="clearCartBtn" type="button">Clear Cart</button>
+                    </div>
+                    <ul class="utility-list" id="cartList"></ul>
+                    <p class="utility-empty" id="cartEmpty">Your cart is empty right now.</p>
+                    <a class="cart-checkout-btn" id="cartCheckoutBtn" href="checkout.html">Proceed to Checkout</a>
+                </div>
+            </div>
+            <div class="auth-actions">
+                <button class="nav-auth-btn ghost" type="button" data-auth-open="login">Login</button>
+                <button class="nav-auth-btn solid" type="button" data-auth-open="signup">Sign Up</button>
+            </div>
+        </div>
+
+
+        <!-- Hero Section -->
+        <div class="background reveal reveal-hero">
+            <div class="background-content">
+                <p class="eyebrow">Curated Civilian Catalogue</p>
+                <h1>Licensed Firearms in India</h1>
+                <p>Comprehensive List of legal civilian firearms with their current market pricing.</p>
+                <div class="hero-actions">
+                    <a class="hero-btn primary" href="#pistols">Explore Catalogue</a>
+                    <button class="hero-btn secondary" type="button" data-auth-open="signup">Join Arsenal</button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-box">
+                        <strong>5</strong>
+                        <span>Categories</span>
+                    </div>
+                    <div class="stat-box">
+                        <strong>15+</strong>
+                        <span>Listings</span>
+                    </div>
+                    <div class="stat-box">
+                        <strong>100%</strong>
+                        <span>Educational Use</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!---------- MAIN CONTENT ---------->
+    <main>
+
+        <!-- Legal Disclaimer -->
+        <section class="disclaimer reveal">
+            <p><strong>LEGAL NOTICE:</strong> In India, a valid Arms License is mandatory under the Arms Act, 1959. Prices are approximate (Ex-Factory) and exclude GST (18-28%) and local licensing fees.</p>
+        </section>
+
+        <section class="intro-strip reveal">
+            <div>
+                <p class="strip-label">Why this page exists</p>
+                <h2>Browse a cleaner overview of licensed platforms, protective gear, and ammunition.</h2>
+            </div>
+            <p>
+                This educational catalogue is organized like a modern showroom so product categories, pricing,
+                and descriptions are easier to scan on both desktop and mobile.
+            </p>
+        </section>
+
+        <section class="member-banner reveal">
+            <div class="member-copy">
+                <p class="strip-label">Member Access</p>
+                <h2>Create an account to save your picks and track a demo shortlist.</h2>
+                <p>Sign up to unlock a front-end only member preview experience with saved comparisons, a personalized greeting, and quick access to featured categories.</p>
+            </div>
+            <div class="member-actions">
+                <button class="hero-btn primary" type="button" data-auth-open="signup">Create Account</button>
+                <button class="hero-btn secondary" type="button" data-auth-open="login">Member Login</button>
+            </div>
+        </section>
+
+        <section class="utility-board reveal" id="tools">
+            <article class="utility-panel">
+                <div class="utility-heading">
+                    <div>
+                        <p class="strip-label">Compare Board</p>
+                        <h2>Comparison Picks</h2>
+                    </div>
+                    <button class="utility-clear" id="clearCompareBtn" type="button">Clear Compare</button>
+                </div>
+                <p class="utility-copy">Use `Compare` to shortlist products and remove them whenever you want.</p>
+                <ul class="utility-list" id="compareList"></ul>
+                <p class="utility-empty" id="compareEmpty">No products added to compare yet.</p>
+            </article>
+        </section>
+
+        <!----- PISTOLS SECTION ----->
+        <section class="container reveal" id="pistols">
+            <div class="section-heading">
+                <h2 class="section-title">Pistols</h2>
+                <p class="section-copy">Compact sidearms intended for licensed civilian ownership, practice, and controlled personal defense contexts.</p>
+            </div>
+            <div class="grid">
+                
+                <div class="card reveal-card"> 
+                    <img src="Weapons/Ashani.png" alt="IOF .32 Ashani Pistol">
+                    <div class="content">
+                        <h3>IOF .32 Ashani Pistol</h3>
+                        <p class="description">The most common civilian semi-auto pistol in India. Compact and reliable. It Uses .32ACP round.</p>
+                        <p class="price">Price: ₹84,000 + GST</p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="compare-btn">Compare</button>
+                    </div>
+                </div>
+
+                <div class="card reveal-card">
+                    <img src="Weapons/Beretta_92fs.png" alt="Beretta 92">
+                    <div class="content">
+                        <h3>Beretta 92</h3>
+                        <p class="description">Iconic Italian design manufactured in India, chambered in 9x19mm.</p>
+                        <p class="price">Price: ₹1,05,000 + GST</p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="compare-btn">Compare</button>
+                    </div>
+                </div>
+
+                <div class="card reveal-card">
+                    <img src="Weapons/Tokarev.png" alt="TT-33 Tokarev">
+                    <div class="content">
+                        <h3>TT-33 Tokarev</h3>
+                        <p class="description">Iconic Soviet designed pistol produced locally and chambered in 9x19mm round.</p>
+                        <p class="price">Price: ₹97,000 + GST</p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="compare-btn">Compare</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!----- RIFLES SECTION ----->
+        <section class="container reveal" id="rifles">
+            <div class="section-heading">
+                <h2 class="section-title">Rifles</h2>
+                <p class="section-copy">Long-gun platforms presented with a stronger visual layout for easier side-by-side comparison.</p>
+            </div>
+            <div class="grid">    
+                <div class="card reveal-card">
+                    <img src="Weapons/AK-203.png" alt="AK-203 rifle">
+                    <div class="content">
+                        <h3>AK-203</h3>
+                        <p class="description">Derived from the Russian AK-103, These Assault Rifles are known for their Reliability. Chambered in 7.62x39mm.</p>
+                        <p class="price">Price: ₹2,50,000 + GST</p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="compare-btn">Compare</button>
+                    </div>
+                </div>
+
+                <div class="card reveal-card">
+                    <img src="Weapons/SIG-716.png" alt="SIG-716 rifle">
+                    <div class="content">
+                        <h3>SIG-716</h3>
+                        <p class="description">American Designed Battle Rifle, perfect for Marksman roles. Chambered in 7.62x51mm.</p>
+                        <p class="price">Price: ₹3,10,000 + GST</p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="compare-btn">Compare</button>
+                    </div>
+                </div>
+                
+                <div class="card reveal-card">
+                    <img src="Weapons/SLR.png" alt="L1A1 Self Loading Rifle">
+                    <div class="content">
+                        <h3>L1A1 Self Loading Rifle</h3>
+                        <p class="description">British derivative of the classic FN FAL. Known for it's reliability and accuracy. Chambered in 7.62x51mm.</p>
+                        <p class="price">Price: ₹2,25,000 + GST</p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="compare-btn">Compare</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!----- SHOTGUNS SECTION ----->
+        <section class="container reveal" id="shotguns">
+            <div class="section-heading">
+                <h2 class="section-title">Shotguns</h2>
+                <p class="section-copy">Sporting and utility-oriented options highlighted in a card layout with better spacing and visual balance.</p>
+            </div>
+            <div class="grid">
+                
+                <div class="card reveal-card">
+                    <img src="Weapons/TOZ-34.png" alt="TOZ-34 shotgun">
+                    <div class="content">
+                        <h3>TOZ-34</h3>
+                        <p class="description">Russian 12 Gauge double barreled shotgun, perfect for hunting and sporting use.</p>
+                        <p class="price">Price: ₹1,29,000 + GST</p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="compare-btn">Compare</button>
+                    </div>
+                </div>
+
+                <div class="card reveal-card">
+                    <img src="Weapons/Mossberg.png" alt="Mossberg 500 shotgun">
+                    <div class="content">
+                        <h3>Mossberg 500</h3>
+                        <p class="description">American 12 Gauge Pump Action Shotgun, perfect for security purposes.</p>
+                        <p class="price">Price: ₹1,85,000 + GST</p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="compare-btn">Compare</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!----- ARMOUR SECTION ----->
+        <section class="container reveal" id="armour">
+            <div class="section-heading">
+                <h2 class="section-title">Armour</h2>
+                <p class="section-copy">Protective equipment grouped in the same premium layout, with emphasis on clarity and quick reading.</p>
+            </div>
+            <div class="grid">
+
+                <div class="card reveal-card">
+                    <img src="Weapons/Level-IIIA_vest.png" alt="Level IIIA ballistic vest">
+                    <div class="content">
+                        <h3>Ballistic Vest (Level IIIA)</h3>
+                        <p class="description">Lightweight soft body armour designed to stop handgun rounds. Comfortable for extended wear. Can't stop rifle rounds.</p>
+                        <p class="price">Price: ₹45,000 + GST</p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="compare-btn">Compare</button>
+                    </div>
+                </div>
+                
+                <div class="card reveal-card">
+                    <img src="Weapons/Level-IV_vest.png" alt="Level IV ballistic vest">
+                    <div class="content">
+                        <h3>Ballistic Vest (Level IV)</h3>
+                        <p class="description">Heavier and more restrictive than a Level IIIA vest but capable of stopping armor-piercing bullets and other high-powered rounds.</p>
+                        <p class="price">Price: ₹95,000 + GST</p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="compare-btn">Compare</button>
+                    </div>
+                </div>
+
+                <div class="card reveal-card">
+                    <img src="Weapons/Patka.png" alt="Patka Helmet">
+                    <div class="content">
+                        <h3>Patka Helmet</h3>
+                        <p class="description">A specialized, lightweight, bullet-resistant headgear used primarily by Indian Army and Paramilitary Forces. Provides frontal protection against rifle rounds and rear protection against handgun rounds.</p>
+                        <p class="price">Price: ₹30,000 + GST</p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="compare-btn">Compare</button>
+                    </div>
+                </div>
+
+                <div class="card reveal-card">
+                    <img src="Weapons/MICH.png" alt="MICH ballistic helmet">
+                    <div class="content">
+                        <h3>MICH Ballistic Helmet</h3>
+                        <p class="description">Modular Integrated Communications Helmet is a Lightweight Combat Helmet used by Military and Law Enhforcement. Provides Level-IIIA protection, shielding against fragments and handgun rounds.</p>
+                        <p class="price">Price: ₹35,000 + GST</p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="compare-btn">Compare</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!----- AMMUNITION SECTION ----->
+        <section class="container reveal" id="ammo">
+            <div class="section-heading">
+                <h2 class="section-title">Ammunition</h2>
+                <p class="section-copy">Common civilian calibers and shell types shown in a format that feels more like a polished product catalogue.</p>
+            </div>
+            <div class="grid">
+
+                <div class="card reveal-card">
+                    <img src="Weapons/32_ACP.png" alt=".32 ACP ammunition">
+                    <div class="content">
+                        <h3>.32 ACP (Box of 25)</h3>
+                        <p class="description">Common civilian ammunition used in pistols like IOF Ashani. Reliable and widely available.</p>
+                        <p class="price">Price: ₹1,200 + GST</p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="compare-btn">Compare</button>
+                    </div>
+                </div>
+
+                <div class="card reveal-card">
+                    <img src="Weapons/9x19mm.png" alt="9x19mm Parabellum ammunition">
+                    <div class="content">
+                        <h3>9x19mm Parabellum (Box of 50)</h3>
+                        <p class="description">World's most popular, standard-pressure handgun cartridge, designed for efficiency, moderate recoil, and a flat trajectory</p>
+                        <p class="price">Price: ₹2,500 + GST</p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="compare-btn">Compare</button>
+                    </div>
+                </div>
+
+                <div class="card reveal-card">
+                    <img src="Weapons/7.62x39mm.png" alt="7.62x39mm ammunition">
+                    <div class="content">
+                        <h3>7.62x39mm (Box of 20)</h3>
+                        <p class="description">Intermediate cartridge used in rifles like AK-203. Known for reliability and stopping power.</p>
+                        <p class="price">Price: ₹2,500 + GST</p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="compare-btn">Compare</button>
+                    </div>
+                </div>
+
+                <div class="card reveal-card">
+                    <img src="Weapons/7.62x51mm.png" alt="7.62x51mm ammunition">
+                    <div class="content">
+                        <h3>7.62x51mm (Box of 20)</h3>
+                        <p class="description">A standardized rimless, bottlenecked rifle cartridge adopted by NATO in 1954, designed for rifles and machine guns. Very High Stopping Power even at longer Ranges.</p>
+                        <p class="price">Price: ₹3,500 + GST</p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="compare-btn">Compare</button>
+                    </div>
+                </div>
+
+                <div class="card reveal-card">
+                    <img src="Weapons/12_Gauge.png" alt="12 gauge ammunition">
+                    <div class="content">
+                        <h3>12 Gauge (Box of 10)</h3>
+                        <p class="description">Most popular and versatile shotgun caliber suitable for hunting and home defense purposes.</p>
+                        <p class="price">Price: ₹900 + GST</p>
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="compare-btn">Compare</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!----- FOOTER ----->
+    <footer>
+        <p>&copy; 2026 IshaporeArsenal Educational Resource. Firearms safety is everyone's responsibility.</p>
+        <p>Created by Dhruv, Archit and Yashwant.</p>
+    </footer>
+
+    <!----- Sign-Up/Login Pages ----->
+    <div class="auth-modal" id="authModal" aria-hidden="true">
+        <div class="auth-panel" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+            <button class="auth-close" id="authClose" type="button" aria-label="Close authentication panel">&times;</button>
+
+            <div class="auth-intro">
+                <p class="strip-label">Member Portal</p>
+                <h2 id="authTitle">Welcome Back</h2>
+                <p id="authSubtitle">Log in to continue exploring the educational catalogue.</p>
+            </div>
+
+            <div class="auth-tabs">
+                <button class="auth-tab active" type="button" data-auth-tab="login">Login</button>
+                <button class="auth-tab" type="button" data-auth-tab="signup">Sign Up</button>
+            </div>
+
+            <form class="auth-form active" id="loginForm">
+                <label for="loginEmail">Email Address</label>
+                <input id="loginEmail" name="email" type="email" placeholder="arsenal@example.com" required>
+
+                <label for="loginPassword">Password</label>
+                <input id="loginPassword" name="password" type="password" placeholder="Enter your password" required>
+
+                <button class="auth-submit" type="submit">Login Securely</button>
+            </form>
+
+            <form class="auth-form" id="signupForm">
+                <label for="signupName">Full Name</label>
+                <input id="signupName" name="name" type="text" placeholder="Enter your name" required>
+
+                <label for="signupEmail">Email Address</label>
+                <input id="signupEmail" name="email" type="email" placeholder="newmember@example.com" required>
+
+                <label for="signupPassword">Create Password</label>
+                <input id="signupPassword" name="password" type="password" placeholder="Choose a strong password" required>
+
+                <button class="auth-submit" type="submit">Create Account</button>
+            </form>
+
+            <p class="auth-message" id="authMessage" aria-live="polite"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

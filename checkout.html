@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!-- Checkout page for demo purchase flow -->
+<html>
+<head>
+    <!-- Meta tags, fonts and stylesheet links -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Ishapore Arsenal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&amp;family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/d/dd/RFI_company_logo.jpg" type="image/png">
+</head>
+<body>
+    <!-- Navigation bar and page header -->
+    <header>
+        <div class="navbar">
+            <a class="logo" href="index.html" aria-label="Ishapore Arsenal home">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/dd/RFI_company_logo.jpg" alt="Ishapore Arsenal logo">
+                <span class="logo-copy">
+                    <strong>Ishapore Arsenal</strong>
+                    <small>Refined Civilian Catalogue</small>
+                </span>
+            </a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about_us.html">History</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Checkout page main content -->
+    <main class="checkout-page">
+        <section class="checkout-hero reveal">
+            <p class="strip-label">Checkout</p>
+            <h1 class="section-title">Secure Demo Purchase Flow</h1>
+            <p class="section-copy">Review the selected items, enter your demo details, and complete the educational checkout experience.</p>
+        </section>
+
+        <section class="checkout-layout">
+            <article class="checkout-panel reveal">
+                <div class="utility-heading">
+                    <div>
+                        <p class="strip-label">Order Summary</p>
+                        <h2>Items Ready for Checkout</h2>
+                    </div>
+                    <a class="utility-clear checkout-back" href="index.html">Back to Store</a>
+                </div>
+
+                <ul class="utility-list checkout-list" id="checkoutList"></ul>
+                <p class="utility-empty" id="checkoutEmpty">No item has been selected yet. Go back to the catalogue and use `Buy Now` or the cart checkout button.</p>
+
+                <div class="checkout-total">
+                    <span>Total</span>
+                    <strong id="checkoutTotal">₹0</strong>
+                </div>
+            </article>
+
+            <article class="checkout-panel reveal">
+                <div class="utility-heading">
+                    <div>
+                        <p class="strip-label">Buyer Details</p>
+                        <h2>Complete Demo Checkout</h2>
+                    </div>
+                </div>
+
+                <!-- Buyer information form -->
+                <form class="checkout-form" id="checkoutForm">
+                    <label for="fullName">Full Name</label>
+                    <input id="fullName" name="fullName" type="text" placeholder="Enter your full name" required>
+
+                    <label for="email">Email Address</label>
+                    <input id="email" name="email" type="email" placeholder="buyer@example.com" required>
+
+                    <label for="city">City</label>
+                    <input id="city" name="city" type="text" placeholder="Enter your city" required>
+
+                    <label for="licenseNote">License / Notes</label>
+                    <textarea id="licenseNote" name="licenseNote" rows="4" placeholder="Add any demo order notes here"></textarea>
+
+                    <button class="auth-submit" id="placeOrderBtn" type="submit">Place Demo Order</button>
+                </form>
+
+                <p class="auth-message" id="checkoutMessage" aria-live="polite"></p>
+            </article>
+        </section>
+    </main>
+
+    <!-- Footer section -->
+    <footer>
+        <p>&copy; 2026 IshaporeArsenal Educational Resource. Firearms safety is everyone's responsibility.</p>
+    </footer>
+
+    <script src="checkout.js"></script>
+</body>
+</html>
